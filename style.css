@@ -1,0 +1,151 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.conversor {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.conversor h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.conversor > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 1px;
+  border-color: #667eea;
+}
+
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#inverter {
+  background-color: #e9e9f5;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+#inverter:hover {
+  background-color: #d8d8ed;
+}
+
+#converter {
+  background-color: #667eea;
+  color: #fff;
+}
+
+#converter:hover {
+  background-color: #5364c9;
+}
+
+
+.resultado {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f4f5ff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.resultado h2 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+#valor-convertido {
+  font-size: 28px;
+  font-weight: bold;
+  color: #667eea;
+  overflow-wrap: anywhere;
+}
+
+#taxa-cambio {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}
+
+
+#converter:disabled {
+  background-color: #a5afe8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+
+@media (max-width: 480px) {
+  .conversor {
+    padding: 20px;
+  }
+
+  .conversor h1 {
+    font-size: 22px;
+  }
+
+  #valor-convertido {
+    font-size: 24px;
+  }
+}

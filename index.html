@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="conversor">
+      <h1>Conversor de Moedas</h1>
+      <p>Converta valores entre diferentes moedas.</p>
+
+      <form id="form-conversor">
+        <div class="campo">
+          <label for="valor">Valor</label>
+          <input
+            type="number"
+            id="valor"
+            placeholder="Digite o valor"
+            min="0.01"
+            step="any"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="moeda-origem">De:</label>
+          <select id="moeda-origem">
+            <option value="BRL">Real (BRL)</option>
+            <option value="USD">Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="moeda-destino">Para:</label>
+          <select id="moeda-destino">
+            <option value="USD">Dólar (USD)</option>
+            <option value="BRL">Real (BRL)</option>
+            <option value="EUR">Euro (EUR)</option>
+          </select>
+        </div>
+
+        <button type="button" id="inverter">Inverter moedas</button>
+
+        <button type="submit" id="converter">Converter</button>
+      </form>
+
+      <div class="resultado" aria-live="polite">
+        <h2>Resultado</h2>
+        <p id="valor-convertido">--</p>
+        <p id="taxa-cambio"></p>
+      </div>
+    </main>
+  </body>
+</html>
